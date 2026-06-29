@@ -1,0 +1,28 @@
+{
+  "drive_base": "H:\\Meu Drive\\Entregas_ITERMA_REURB",
+  "repo_base": "C:\\REURB",
+  "nucleos": [
+    {
+      "id": "campo_de_pouso_051201571_2026",
+      "processo": "051201571/2026",
+      "municipio_pasta": "Peri_Mirim",
+      "municipio": "Peri Mirim",
+      "bairro_pasta": "Campo_de_Pouso_051201571_2026",
+      "bairro": "Campo de Pouso",
+      "responsavel": "Bruna Silva Sa Pereira",
+      "status_entrega": "EM REVISAO",
+      "memoriais_quadras_slug": "campo_de_pouso"
+    },
+    {
+      "id": "centro_050601273_2026",
+      "processo": "050601273/2026",
+      "municipio_pasta": "Peri_Mirim",
+      "municipio": "Peri Mirim",
+      "bairro_pasta": "Centro_050601273_2026",
+      "bairro": "Centro",
+      "responsavel": "Leandro Miranda da Silva",
+      "status_entrega": "PARCIALMENTE APROVADO",
+      "memoriais_quadras_slug": "centro"
+    }
+  ]
+}

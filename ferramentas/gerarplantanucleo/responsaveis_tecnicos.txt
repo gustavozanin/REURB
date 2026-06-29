@@ -1,0 +1,48 @@
+# Responsáveis Técnicos
+#
+# Uso no inputJson:
+# "responsavelTecnico": "bruna_silva_sa_pereira"
+# ou
+# "responsavelTecnico": {"id": "bruna_silva_sa_pereira"}
+
+[camila_araujo_maranhao]
+nome=Camila Araújo Maranhão
+email=camilamaranhao.arq@gmail.com
+formacao=Arquiteta e Urbanista
+registro=CAU nº A1516140
+
+[wenderson_carlos_da_silva_teixeira]
+nome=Wenderson Carlos da Silva Teixeira
+email=teixeira.geografo@gmail.com
+formacao=Geógrafo
+registro=CREA: 1112246169MA
+
+[bruna_silva_sa_pereira]
+nome=Bruna Silva Sá Pereira
+email=brunafr2011@live.com
+formacao=Arquiteta e Urbanista
+registro=CAU nº A274759-6
+
+[paula_rocha_braga]
+nome=Paula Rocha Braga
+email=arquitetapaularocha@gmail.com
+formacao=Arquiteta e Urbanista
+registro=CAU nº A57068-0
+
+[girlene_de_lima_santos]
+nome=Girlene de Lima Santos
+email=girlenelima673@gmail.com
+formacao=Engenheira Agrônoma
+registro=CREA: 1122922825MA
+
+[leandro_miranda_da_silva]
+nome=Leandro Miranda da Silva
+email=leandromiranda178@gmail.com
+formacao=Engenheiro Civil
+registro=CREA: 1122005733MA
+
+[luciano_schmitter_dos_santos]
+nome=Luciano Schmitter dos Santos
+email=schmitterluciano@gmail.com
+formacao=Arquiteto e Urbanista
+registro=CAU nº A2962543

@@ -1,0 +1,50 @@
+{
+   "identificacaoPlanilha": {
+     "areaLiquida": "",
+     "areaTotal": "",
+     "areadeduzida": "",
+     "imagemPlanta": "",
+     "zipShapePlanta": "",
+     "informacoesInteressado": {
+       "bairro": "",
+       "cpf": "",
+       "endereco": "",
+       "lote": "",
+       "numero": "",
+       "quadra": ""
+     },
+     "municipios": [],
+     "municipiosId": [],
+     "perimetroTotal": "",
+     "perimetros": [
+       {
+         "denominacao": "",
+         "areaPerimetro": "",
+         "fusoUTM": "",
+         "banda": "",
+         "hemisferio": "",
+         "idMunicipio": 0,
+         "idMunicipioLista": [],
+         "idMunicipioPrincipal": 0,
+         "meridianoCentral": "",
+         "municipio": "",
+         "dadosPerimetro": [
+            {
+              "vertice": "",
+              "confrontante": "",
+              "azimute": "",
+              "distancia": "",
+              "eLong": "",
+              "nLat": ""
+            }
+         ]
+       }
+     ],
+     "responsavelTecnico": {
+       "codigoCredenciamento": "",
+       "formacao": "",
+       "nome": ""
+     }
+   },
+   "pronto": false
+ }

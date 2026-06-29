@@ -1,0 +1,19 @@
+{
+  "exportarCamadasArcGIS": true,
+  "aprxCamadas": "C:\\Users\\gusta\\OneDrive\\Documentos\\ArcGIS\\Projects\\REURB_ITERMA\\REURB_ITERMA.aprx",
+  "camadasArcGIS": {
+    "lotes": "Lotes",
+    "bairro": "Bairro",
+    "quadras": "Quadras",
+    "eixoViario": "Eixo Viario"
+  },
+  "shpFrenteLotes": "C:\\REURB\\ferramentas\\gerarplantageralbairro\\marcacoes\\marcacao_frente_lote_ma_reurb.shp",
+  "rasterSituacao": "C:\\Users\\gusta\\Downloads\\SHPS_Rec\\Centro_PeriMirim_Rec.tif",
+  "dados": {
+    "numeroProcessoColetivo": "050601273/2026",
+    "municipio": "Peri Mirim",
+    "bairro": "Centro"
+  },
+  "responsavelTecnico": "leandro_miranda_da_silva",
+  "gerarMemorial": true
+}

@@ -1,0 +1,12 @@
+{
+  "exportarCamadasArcGIS": true,
+  "aprxCamadas": "C:\\Users\\gusta\\OneDrive\\Documentos\\ArcGIS\\Projects\\REURB_ITERMA\\REURB_ITERMA.aprx",
+  "rasterSituacao": "C:\\Users\\gusta\\Downloads\\SHPS_Rec\\Centro_PeriMirim_Rec.tif",
+  "dados": {
+    "numeroProcessoColetivo": "050601273/2026",
+    "municipio": "Peri Mirim",
+    "bairro": "Centro"
+  },
+  "responsavelTecnico": "leandro_miranda_da_silva",
+  "anexarLista": true
+}

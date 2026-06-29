@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.env
+.venv/
+
+# Saídas geradas pelas ferramentas (ver README_resultados.txt em cada pasta)
+**/resultados/**
+!**/resultados/README_resultados.txt
+
+# Dados exportados e arquivos temporários de processamento
+**/dados_exportados_arcgis/**
+**/tmp/**
+
+# ArcGIS
+*.lock
+
+# Sistema operacional
+Thumbs.db
+Desktop.ini
+.DS_Store

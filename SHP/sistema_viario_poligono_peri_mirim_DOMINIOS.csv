@@ -1,0 +1,15 @@
+campo,valor,descricao
+tipo_log,RUA,Rua
+tipo_log,TRAVESSA,Travessa
+tipo_log,AVENIDA,Avenida
+tipo_log,RODOVIA,Rodovia ou MA
+tipo_log,VIA LOCAL,Via local sem classificacao especifica
+situacao,EXISTENTE,Via existente em campo
+situacao,PROJETADA,Via projetada
+situacao,REGULARIZADA,Via regularizada no processo
+situacao,AJUSTADA,Via ajustada tecnicamente
+origem,LEVANTAMENTO,Geometria obtida por levantamento
+origem,IMAGEM,Geometria vetorizada por imagem
+origem,DESENHO,Geometria desenhada manualmente
+origem,BUFFER_EIXO,Geometria criada por buffer do eixo
+origem,AJUSTE_TECNICO,Geometria ajustada tecnicamente

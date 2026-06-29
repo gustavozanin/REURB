@@ -1,0 +1,9 @@
+{
+  "nome": "Vila Socorro",
+  "n_coletivo": "051301592/2026",
+  "municipio": "Peri Mirim",
+  "statusAndamento": "Pre vetorizacao em andamento",
+  "etapa": "Pre-vetorizacao",
+  "exportarCamadasArcGIS": true,
+  "aprxCamadas": "C:\\Users\\gusta\\OneDrive\\Documentos\\ArcGIS\\Projects\\REURB_ITERMA\\REURB_ITERMA.aprx"
+}

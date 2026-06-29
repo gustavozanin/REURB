@@ -1,0 +1,9 @@
+{
+  "nome": "Centro",
+  "n_coletivo": "051301595/2026",
+  "municipio": "Peri Mirim",
+  "statusAndamento": "Vetorizacao concluida",
+  "etapa": "Pre-vetorizacao",
+  "exportarCamadasArcGIS": true,
+  "aprxCamadas": "C:\\Users\\gusta\\OneDrive\\Documentos\\ArcGIS\\Projects\\REURB_ITERMA\\REURB_ITERMA.aprx"
+}

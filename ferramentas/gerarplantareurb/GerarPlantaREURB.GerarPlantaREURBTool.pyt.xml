@@ -1,0 +1,46 @@
+<metadata xml:lang="pt">
+	<Esri>
+		<CreaDate>20251103</CreaDate>
+		<CreaTime>12123400</CreaTime>
+		<ArcGISFormat>1.0</ArcGISFormat>
+		<SyncOnce>TRUE</SyncOnce>
+		<ModDate>20251103</ModDate>
+		<ModTime>134643</ModTime>
+	</Esri>
+	<tool name="GerarPlantaREURBTool" displayname="GerarPlantaREURBTool" toolboxalias="GerarPlantaREURB">
+		<arcToolboxHelpPath>c:\program files\arcgis\pro\Resources\Help\gp</arcToolboxHelpPath>
+		<parameters>
+			<param name="inputJson" displayname="inputJson" type="Required" direction="Input" datatype="String" expression="inputJson">
+				<dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;dados e formato de entrada:
+{
+  "identificacaoPlanilha": {
+    "cpfCnpj": "",
+    "nome": "",
+    "lote": "",
+    "quadra": "",
+    "endereco": "",
+    "bairro": ""
+  },
+  "responsavelTecnico": {
+    "nome": "",
+    "formacao": "",
+    "codigoCredenciamento": ""
+  },
+  "numeroProcessoColetivo": ""
+}&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+			</param>
+		</parameters>
+	</tool>
+	<dataIdInfo>
+		<idCitation>
+			<resTitle>GerarPlantaREURBTool</resTitle>
+		</idCitation>
+	</dataIdInfo>
+	<distInfo>
+		<distributor>
+			<distorFormat>
+				<formatName>ArcToolbox Tool</formatName>
+			</distorFormat>
+		</distributor>
+	</distInfo>
+</metadata>

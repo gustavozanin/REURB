@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<metadata xml:lang="pt">
+	<Esri>
+		<CreaDate>20251103</CreaDate>
+		<CreaTime>12104500</CreaTime>
+		<ArcGISFormat>1.0</ArcGISFormat>
+		<SyncOnce>TRUE</SyncOnce>
+		<ModDate>20260602</ModDate>
+		<ModTime>160306</ModTime>
+	</Esri>
+	<toolbox name="GerarPlantaREURB" alias="GerarPlantaREURB">
+		<arcToolboxHelpPath>c:\program files\arcgis\pro\Resources\Help\gp</arcToolboxHelpPath>
+		<toolsets/>
+	</toolbox>
+	<dataIdInfo>
+		<idCitation>
+			<resTitle>GerarPlantaREURB</resTitle>
+		</idCitation>
+	</dataIdInfo>
+	<distInfo>
+		<distributor>
+			<distorFormat>
+				<formatName>ArcToolbox Toolbox</formatName>
+			</distorFormat>
+		</distributor>
+	</distInfo>
+</metadata>
