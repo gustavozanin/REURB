@@ -1,0 +1,539 @@
+{
+  "type": "CIMLayerDocument",
+  "version": "3.4.0",
+  "build": 55405,
+  "layers": [
+    "CIMPATH=4a07ea64e30d4278909f5b76ca497bdd.json"
+  ],
+  "layerDefinitions": [
+    {
+      "type": "CIMFeatureLayer",
+      "name": "Eixo Viario",
+      "uRI": "CIMPATH=4a07ea64e30d4278909f5b76ca497bdd.json",
+      "sourceURI": "b982f35731994b719bd6c33beb55a4e8",
+      "sourceModifiedTime": {
+        "type": "TimeInstant",
+        "start": 1780511461290
+      },
+      "useSourceMetadata": true,
+      "sourcePortalUrl": "https://www.arcgis.youxgroup.com.br/portal/",
+      "layerElevation": {
+        "type": "CIMLayerElevationSurface",
+        "elevationSurfaceLayerURI": "CIMPATH=Map/63efb584927c45aba0cc5e5a071e3311.json"
+      },
+      "expanded": true,
+      "layerType": "Operational",
+      "showLegends": true,
+      "visibility": true,
+      "displayCacheType": "Permanent",
+      "maxDisplayCacheAge": 5,
+      "popupInfo": {
+        "type": "CIMPopupInfo",
+        "title": "{expression/displayExp}",
+        "expressionInfos": [
+          {
+            "type": "CIMExpressionInfo",
+            "title": "Display Expression",
+            "expression": "$feature.logradouro",
+            "name": "displayExp",
+            "returnType": "String"
+          }
+        ],
+        "mediaInfos": [
+          {
+            "type": "CIMTableMediaInfo",
+            "refreshRateUnit": "esriTimeUnitsSeconds",
+            "rowSpan": 1,
+            "columnSpan": 1,
+            "fields": [
+              "objectid",
+              "logradouro",
+              "globalid",
+              "campo",
+              "created_user",
+              "created_date",
+              "last_edited_user",
+              "last_edited_date",
+              "Shape__Length"
+            ]
+          }
+        ],
+        "gridLayout": {
+          "type": "CIMPopupLayout",
+          "columnWidths": [
+            100
+          ],
+          "borderWidth": 0,
+          "borderColor": {
+            "type": "CIMRGBColor",
+            "values": [
+              0,
+              0,
+              0,
+              100
+            ]
+          }
+        },
+        "fieldDescriptions": [
+          {
+            "type": "CIMPopupFieldDescription",
+            "alias": "st_length(shape)",
+            "fieldName": "Shape__Length",
+            "numberFormat": {
+              "type": "CIMNumericFormat",
+              "alignmentOption": "esriAlignLeft",
+              "alignmentWidth": 12,
+              "roundingOption": "esriRoundNumberOfDecimals",
+              "roundingValue": 6
+            }
+          },
+          {
+            "type": "CIMPopupFieldDescription",
+            "alias": "campo",
+            "fieldName": "campo",
+            "numberFormat": {
+              "type": "CIMNumericFormat",
+              "alignmentOption": "esriAlignLeft",
+              "alignmentWidth": 12,
+              "roundingOption": "esriRoundNumberOfDecimals",
+              "roundingValue": 0
+            }
+          },
+          {
+            "type": "CIMPopupFieldDescription",
+            "alias": "created_date",
+            "fieldName": "created_date"
+          },
+          {
+            "type": "CIMPopupFieldDescription",
+            "alias": "created_user",
+            "fieldName": "created_user"
+          },
+          {
+            "type": "CIMPopupFieldDescription",
+            "alias": "globalid",
+            "fieldName": "globalid"
+          },
+          {
+            "type": "CIMPopupFieldDescription",
+            "alias": "last_edited_date",
+            "fieldName": "last_edited_date"
+          },
+          {
+            "type": "CIMPopupFieldDescription",
+            "alias": "last_edited_user",
+            "fieldName": "last_edited_user"
+          },
+          {
+            "type": "CIMPopupFieldDescription",
+            "alias": "Logradouro",
+            "fieldName": "logradouro"
+          },
+          {
+            "type": "CIMPopupFieldDescription",
+            "alias": "OBJECTID",
+            "fieldName": "objectid",
+            "numberFormat": {
+              "type": "CIMNumericFormat",
+              "alignmentOption": "esriAlignLeft",
+              "alignmentWidth": 12,
+              "roundingOption": "esriRoundNumberOfDecimals",
+              "roundingValue": 0
+            }
+          }
+        ]
+      },
+      "showPopups": true,
+      "serviceLayerID": -1,
+      "refreshRate": -1,
+      "refreshRateUnit": "esriTimeUnitsSeconds",
+      "webMapLayerID": "48d1300b3a9942d3951159d41ad6d280",
+      "blendingMode": "Alpha",
+      "allowDrapingOnIntegratedMesh": true,
+      "featureElevationExpression": "0",
+      "featureTable": {
+        "type": "CIMFeatureTable",
+        "displayField": "logradouro",
+        "editable": true,
+        "fieldDescriptions": [
+          {
+            "type": "CIMFieldDescription",
+            "alias": "OBJECTID",
+            "fieldName": "objectid",
+            "numberFormat": {
+              "type": "CIMNumericFormat",
+              "alignmentOption": "esriAlignRight",
+              "alignmentWidth": 0,
+              "roundingOption": "esriRoundNumberOfDecimals",
+              "roundingValue": 0
+            },
+            "readOnly": true,
+            "visible": true,
+            "searchMode": "Exact"
+          },
+          {
+            "type": "CIMFieldDescription",
+            "alias": "Logradouro",
+            "fieldName": "logradouro",
+            "visible": true,
+            "searchMode": "Exact"
+          },
+          {
+            "type": "CIMFieldDescription",
+            "alias": "campo",
+            "fieldName": "campo",
+            "numberFormat": {
+              "type": "CIMNumericFormat",
+              "alignmentOption": "esriAlignRight",
+              "alignmentWidth": 0,
+              "roundingOption": "esriRoundNumberOfDecimals",
+              "roundingValue": 0
+            },
+            "visible": true,
+            "searchMode": "Exact"
+          },
+          {
+            "type": "CIMFieldDescription",
+            "alias": "created_user",
+            "fieldName": "created_user",
+            "readOnly": true,
+            "visible": true,
+            "searchMode": "Exact"
+          },
+          {
+            "type": "CIMFieldDescription",
+            "alias": "created_date",
+            "fieldName": "created_date",
+            "readOnly": true,
+            "visible": true,
+            "searchMode": "Exact"
+          },
+          {
+            "type": "CIMFieldDescription",
+            "alias": "last_edited_user",
+            "fieldName": "last_edited_user",
+            "readOnly": true,
+            "visible": true,
+            "searchMode": "Exact"
+          },
+          {
+            "type": "CIMFieldDescription",
+            "alias": "last_edited_date",
+            "fieldName": "last_edited_date",
+            "readOnly": true,
+            "visible": true,
+            "searchMode": "Exact"
+          },
+          {
+            "type": "CIMFieldDescription",
+            "alias": "globalid",
+            "fieldName": "globalid",
+            "readOnly": true,
+            "visible": true,
+            "searchMode": "Exact"
+          },
+          {
+            "type": "CIMFieldDescription",
+            "alias": "SHAPE",
+            "fieldName": "shape",
+            "visible": true,
+            "searchMode": "Exact"
+          }
+        ],
+        "dataConnection": {
+          "type": "CIMStandardDataConnection",
+          "workspaceConnectionString": "URL=https://arcgis.youxgroup.com.br/server/rest/services/SICARF_MA/Edição_Homolog_versao_2/FeatureServer;VERSION=sde.DEFAULT;VERSIONGUID={BD3F4817-9A00-41AC-B0CC-58F78DBAE0A1}",
+          "workspaceFactory": "FeatureService",
+          "dataset": "0",
+          "datasetType": "esriDTFeatureClass"
+        },
+        "studyAreaSpatialRel": "esriSpatialRelUndefined",
+        "searchOrder": "esriSearchOrderSpatial"
+      },
+      "featureTemplates": [
+        {
+          "type": "CIMRowTemplate",
+          "name": "Eixo Viario",
+          "defaultToolGUID": "{AF2DBF8F-280E-44db-8860-E399D0B30CF1}",
+          "defaultValues": {
+            "type": "PropertySet",
+            "propertySetItems": [
+              "campo",
+              null,
+              "logradouro",
+              null
+            ]
+          }
+        }
+      ],
+      "htmlPopupEnabled": true,
+      "selectable": true,
+      "featureCacheType": "Session",
+      "displayFiltersType": "ByScale",
+      "featureBlendingMode": "Alpha",
+      "layerEffectsMode": "Layer",
+      "labelClasses": [
+        {
+          "type": "CIMLabelClass",
+          "expressionTitle": "Custom",
+          "expression": "$feature.logradouro",
+          "expressionEngine": "Arcade",
+          "featuresToLabel": "AllVisibleFeatures",
+          "maplexLabelPlacementProperties": {
+            "type": "CIMMaplexLabelPlacementProperties",
+            "featureType": "Line",
+            "avoidPolygonHoles": true,
+            "canOverrunFeature": false,
+            "canPlaceLabelOutsidePolygon": true,
+            "canRemoveOverlappingLabel": true,
+            "canStackLabel": true,
+            "centerLabelAnchorType": "Symbol",
+            "connectionType": "MinimizeLabels",
+            "constrainOffset": "AboveLine",
+            "contourAlignmentType": "Page",
+            "contourLadderType": "Straight",
+            "contourMaximumAngle": 90,
+            "enableConnection": true,
+            "featureWeight": 0,
+            "fontHeightReductionLimit": 4,
+            "fontHeightReductionStep": 0.5,
+            "fontWidthReductionLimit": 90,
+            "fontWidthReductionStep": 5,
+            "graticuleAlignmentType": "Straight",
+            "labelBuffer": 15,
+            "labelLargestPolygon": true,
+            "labelPriority": -1,
+            "labelStackingProperties": {
+              "type": "CIMMaplexLabelStackingProperties",
+              "stackAlignment": "ChooseBest",
+              "maximumNumberOfLines": 3,
+              "minimumNumberOfCharsPerLine": 3,
+              "maximumNumberOfCharsPerLine": 24,
+              "separators": [
+                {
+                  "type": "CIMMaplexStackingSeparator",
+                  "separator": " ",
+                  "splitAfter": true
+                },
+                {
+                  "type": "CIMMaplexStackingSeparator",
+                  "separator": ",",
+                  "visible": true,
+                  "splitAfter": true
+                }
+              ],
+              "trimStackingSeparators": true
+            },
+            "lineFeatureType": "StreetAddressRange",
+            "linePlacementMethod": "CenteredStraightOnLine",
+            "maximumLabelOverrun": 72,
+            "maximumLabelOverrunUnit": "Point",
+            "measureFromClippedFeatureGeometry": true,
+            "minimumFeatureSizeUnit": "Map",
+            "multiPartOption": "OneLabelPerFeature",
+            "offsetAlongLineProperties": {
+              "type": "CIMMaplexOffsetAlongLineProperties",
+              "placementMethod": "BestPositionAlongLine",
+              "labelAnchorPoint": "NearestSideOfLabel",
+              "distanceUnit": "Percentage",
+              "useLineDirection": true
+            },
+            "pointExternalZonePriorities": {
+              "type": "CIMMaplexExternalZonePriorities",
+              "aboveLeft": 4,
+              "aboveCenter": 2,
+              "aboveRight": 1,
+              "centerRight": 3,
+              "belowRight": 5,
+              "belowCenter": 7,
+              "belowLeft": 8,
+              "centerLeft": 6
+            },
+            "pointPlacementMethod": "AroundPoint",
+            "polygonAnchorPointType": "GeometricCenter",
+            "polygonBoundaryWeight": 200,
+            "polygonExternalZones": {
+              "type": "CIMMaplexExternalZonePriorities",
+              "aboveLeft": 4,
+              "aboveCenter": 2,
+              "aboveRight": 1,
+              "centerRight": 3,
+              "belowRight": 5,
+              "belowCenter": 7,
+              "belowLeft": 8,
+              "centerLeft": 6
+            },
+            "polygonFeatureType": "General",
+            "polygonInternalZones": {
+              "type": "CIMMaplexInternalZonePriorities",
+              "center": 1
+            },
+            "polygonPlacementMethod": "CurvedInPolygon",
+            "primaryOffset": 1,
+            "primaryOffsetUnit": "Point",
+            "removeAmbiguousLabels": "All",
+            "removeExtraWhiteSpace": true,
+            "repetitionIntervalUnit": "Map",
+            "rotationProperties": {
+              "type": "CIMMaplexRotationProperties",
+              "rotationType": "Arithmetic",
+              "alignmentType": "Straight"
+            },
+            "secondaryOffset": 100,
+            "secondaryOffsetUnit": "Percentage",
+            "strategyPriorities": {
+              "type": "CIMMaplexStrategyPriorities",
+              "stacking": 1,
+              "overrun": 2,
+              "fontCompression": 3,
+              "fontReduction": 4,
+              "abbreviation": 5
+            },
+            "thinningDistanceUnit": "Map",
+            "truncationMarkerCharacter": ".",
+            "truncationMinimumLength": 1,
+            "truncationPreferredCharacters": "aeiou",
+            "polygonAnchorPointPerimeterInsetUnit": "Point"
+          },
+          "name": "Class 1",
+          "priority": -1,
+          "standardLabelPlacementProperties": {
+            "type": "CIMStandardLabelPlacementProperties",
+            "featureType": "Line",
+            "featureWeight": "None",
+            "labelWeight": "High",
+            "numLabelsOption": "OneLabelPerName",
+            "lineLabelPosition": {
+              "type": "CIMStandardLineLabelPosition",
+              "above": true,
+              "inLine": true,
+              "parallel": true
+            },
+            "lineLabelPriorities": {
+              "type": "CIMStandardLineLabelPriorities",
+              "aboveStart": 3,
+              "aboveAlong": 3,
+              "aboveEnd": 3,
+              "centerStart": 3,
+              "centerAlong": 3,
+              "centerEnd": 3,
+              "belowStart": 3,
+              "belowAlong": 3,
+              "belowEnd": 3
+            },
+            "pointPlacementMethod": "AroundPoint",
+            "pointPlacementPriorities": {
+              "type": "CIMStandardPointPlacementPriorities",
+              "aboveLeft": 2,
+              "aboveCenter": 2,
+              "aboveRight": 1,
+              "centerLeft": 3,
+              "centerRight": 2,
+              "belowLeft": 3,
+              "belowCenter": 3,
+              "belowRight": 2
+            },
+            "rotationType": "Arithmetic",
+            "polygonPlacementMethod": "AlwaysHorizontal"
+          },
+          "textSymbol": {
+            "type": "CIMSymbolReference",
+            "symbol": {
+              "type": "CIMTextSymbol",
+              "blockProgression": "TTB",
+              "compatibilityMode": true,
+              "depth3D": 1,
+              "drawSoftHyphen": true,
+              "extrapolateBaselines": true,
+              "fontEffects": "Normal",
+              "fontEncoding": "Unicode",
+              "fontFamilyName": "Tahoma",
+              "fontStyleName": "Regular",
+              "fontType": "Unspecified",
+              "haloSize": 1,
+              "height": 3.5,
+              "hinting": "Default",
+              "horizontalAlignment": "Left",
+              "kerning": true,
+              "letterWidth": 100,
+              "ligatures": true,
+              "lineGapType": "ExtraLeading",
+              "symbol": {
+                "type": "CIMPolygonSymbol",
+                "symbolLayers": [
+                  {
+                    "type": "CIMSolidFill",
+                    "enable": true,
+                    "color": {
+                      "type": "CIMRGBColor",
+                      "values": [
+                        0,
+                        0,
+                        0,
+                        100
+                      ]
+                    }
+                  }
+                ],
+                "angleAlignment": "Map"
+              },
+              "symbol3DProperties": {
+                "type": "CIM3DSymbolProperties",
+                "dominantSizeAxis3D": "Z",
+                "rotationOrder3D": "YXZ",
+                "scaleZ": 1,
+                "scaleY": 1
+              },
+              "textCase": "Normal",
+              "textDirection": "LTR",
+              "verticalAlignment": "Bottom",
+              "verticalGlyphOrientation": "Right",
+              "wordSpacing": 100,
+              "billboardMode3D": "FaceNearPlane"
+            },
+            "symbolName": "Text"
+          },
+          "useCodedValue": true,
+          "visibility": true,
+          "iD": -1
+        }
+      ],
+      "labelVisibility": true,
+      "renderer": {
+        "type": "CIMSimpleRenderer",
+        "sampleSize": 10000,
+        "patch": "Default",
+        "symbol": {
+          "type": "CIMSymbolReference",
+          "symbol": {
+            "type": "CIMLineSymbol",
+            "symbolLayers": [
+              {
+                "type": "CIMSolidStroke",
+                "enable": true,
+                "capStyle": "Round",
+                "joinStyle": "Round",
+                "lineStyle3D": "Strip",
+                "miterLimit": 10,
+                "width": 1,
+                "height3D": 1,
+                "anchor3D": "Center",
+                "color": {
+                  "type": "CIMRGBColor",
+                  "values": [
+                    230,
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      },
+      "scaleSymbols": true,
+      "snappable": true
+    }
+  ]
+}

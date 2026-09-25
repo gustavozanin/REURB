@@ -1,0 +1,62 @@
+NOTAS DE TESTE — REURB Plantas v0.14.0
+======================================
+
+Informe versao=0.14.0 (VERSAO.txt) em qualquer chamado.
+Não misture esta pasta com a v0.13.2 no mesmo projeto do Pro.
+
+O que mudou em relação à 0.13.2
+-------------------------------
+1) Cada corrida Desktop usa scratch própria (em %TEMP%). A scratch do
+   projeto (OneDrive) não é mais apagada no fim da ferramenta.
+2) Os arquivos vão para uma subpasta com data e pid. Se o arquivo já
+   existir, a ferramenta para em vez de sobrescrever.
+3) Grava diario.json na pasta da corrida (versão, Pro, módulos, scratch
+   e, no núcleo/loteamento, contagem atributo / INTERSECT / centroide).
+4) O carregador da caixa identifica o .pyt pelo caminho absoluto.
+   Duas versões do pacote não se misturam no Python do Pro.
+5) Rótulo de lote vizinho em caixa alta (LOTE 33, LOTE 32 A), já
+   validado no reteste institucional.
+6) Loteamento: número da quadra no mapa (Q9, Q12…) no mesmo desenho
+   do núcleo — texto laranja, sem caixa amarela. Conferido em
+   051301595/2026.
+
+O que já vinha da 0.13.2 e permanece
+------------------------------------
+- Núcleo/loteamento: escala do mapa principal; quadras na borda por
+  INTERSECT; quadra desenhada acima dos lotes.
+- Confrontante no trecho De→Para (não “adiante”).
+- RT: nome, formação e CREA só juntos quando os três vêm do mesmo cadastro.
+- Confrontante Externo (layer 1, linha, 5 m no ponto médio).
+- Vértices: mesmos pontos de edição do Pro; carimbo com área/perímetro
+  da geometria original.
+
+Gate para fechar a entrega (25/09/2026 — passou)
+------------------------------------------------
+Pasta: C:\Users\gusta\Downloads\testes_ferramenta\v0.14.0\
+
+A) Núcleo — 062502287/2026 (São Sebastião): passou
+   (0.14.0, scratch em %TEMP%, Q1 e Q2 no layout, 12 quadras / 270 lotes).
+
+B) Vértices — 050601273/2026 (Centro Peri Mirim): passou
+   P-051 a P-053, P-062 e P-063 = MATRÍCULA N° 128, L 02.
+   diferencaFechamentoM no JSON é corda vs arco (não anel aberto).
+
+C) Institucional — 050601273/2026 Q11 L01: passou
+   P-001→P-002 = LOTE 02 no CSV, quadro e memorial.
+
+D) Loteamento — 050601273/2026 (Centro Peri Mirim): passou
+   30 quadras (1–30). Q9, Q12, Q18, Q28 visíveis. Q31 e Q50 não
+   existem neste coletivo. Q18 = 7 lotes.
+   Complemento visual (Q31 e Q50): loteamento 051301595/2026
+   (Centro / São João do Paraíso) — Q18 = 31, Q50 = 34 lotes.
+
+Fora deste gate (não bloqueia 0.14.0)
+-------------------------------------
+- Erro 2 das 164 peças individuais do Centro (régua De→Para; não é a
+  planta de vértices do coletivo).
+- Auditoria 5 cm dos memoriais de quadra (soma de vértices de edição
+  vs perímetro com curva).
+- Lookup de formação/CREA só na ferramenta de quadras.
+
+Não rode o empacotar_reurb_0132.py: ele remonta a 0.13.2 antiga e
+apaga o trabalho desta pasta.

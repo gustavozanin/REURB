@@ -1,0 +1,49 @@
+LEIA-ME — Layouts da ferramenta Gerar Planta Lote Institucional
+==========================================================
+
+Padrão visual: **planta individual de lote** (mesmo modelo do
+`gerarplantareurb` / `Layout_Planta_Memorial_A`).
+
+Projeto: `layout/project_layout.aprx`
+Layout da planta: `Layout_Planta_Memorial_A`
+
+--------------------------------------------------------------------
+Carimbo (preenchido pelo código)
+--------------------------------------------------------------------
+
+- Título estático: Planta Institucional para fins de REURB
+- Proprietário / interessado: campo Nome do lote
+- CPF/CNPJ: — (institucional sem documento)
+- Bairro, Município, Quadra, Lote, Área, Perímetro, Data
+- Logradouro (denominacao): campo Rua do lote (igual gerarplantareurb)
+- Status Institucional Municipal/Estadual: memorial (não no slot Logradouro)
+- RT: nome, formação, CREA/CAU
+- Quadro de Confrontações: **sempre** anexado ao PDF unificado
+  (o layout A3 institucional não substitui o quadro completo)
+
+Map frames: MAP_FRAME (lote + vértices + confrontantes) e
+OVERVIEW_MAP_FRAME (lote destacado + demais lotes da quadra).
+
+Confrontantes no mapa (ordem): Lotes vizinhos por aresta compartilhada
+(``Lote 02``, rejeita canto falso) → Confrontante Externo → Eixo.
+
+Rótulos de confrontação (validado no Pro):
+- orientação pela geometria original do lote (sem inverter Left/Right)
+- linhas/pontos auxiliares deslocados fisicamente para fora (3 mm no papel,
+  convertidos conforme a escala)
+- Maplex com primaryOffset=0; OffsetCurved/callout/halo neutralizados
+- CIM relido e validado; falha → não emite planta com rótulo incerto
+
+Memorial narrativo, quadro e termo: gerados por ReportLab
+(`documentos_pdf.py`). Ordem do PDF unificado:
+Planta → Memorial → Quadro de Confrontações → Termo.
+
+Margens da planta A3 e dos PDFs de memorial, quadro e termo
+(ABNT NBR 13133 / NBR 17047):
+esquerda 25 mm; direita 10 mm; topo 10 mm; rodapé 20 mm.
+
+--------------------------------------------------------------------
+Backup
+--------------------------------------------------------------------
+
+Cópia anterior (perímetro de bairro): `project_layout_perimetro_bkp.aprx`

@@ -1,0 +1,123 @@
+LEIA-ME — Contrato do layout cartográfico A3
+==================================================
+
+Status: BLOQUEADO PARA HOMOLOGAÇÃO — o layout A3 existe, mas precisa ser
+completado no ArcGIS Pro com os elementos obrigatórios listados abaixo.
+
+O projeto `layout/project_layout.aprx` já existe. Memorial e termo de
+autenticação são gerados em A4, e o Quadro de Confrontações em A3
+paisagem, todos pelo código com ReportLab; portanto, o APRX precisa
+conter apenas o layout cartográfico A3 descrito neste arquivo.
+
+--------------------------------------------------------------------
+PASSO 1 — Ponto de partida (não corromper os originais)
+--------------------------------------------------------------------
+
+Não edite os projetos abaixo diretamente. Copie um deles para
+`layout/project_layout.aprx` nesta pasta e edite a cópia:
+
+  - DIST_ANALISTAS\gerarplantanucleo\gerarplantanucleo\layout\project_layout.aprx
+    (referência visual mais próxima: já tem Layout_Planta_Nucleo_A3 e
+    Layout_Anexo_Tabela_A3 para copiar estilo de carimbo/legenda)
+
+  - DIST_ANALISTAS\pacote_desktop\REURB_Plantas_Desktop.aprx
+    (projeto Desktop compartilhado, caso prefira partir dele)
+
+--------------------------------------------------------------------
+PASSO 2 — Completar o layout A3 existente
+--------------------------------------------------------------------
+
+1) Layout_Planta_Perimetro_A3  (página A3)
+   - Map Frame com: perímetro (bairro), vértices (layers/VERTICES.lyrx),
+     segmentos/confrontantes (layers/CONFRONTANTES.lyrx)
+   - Map Frame de overview (layers/PERIMETRO_OVERVIEW.lyrx)
+   - Carimbo/cabeçalho com REURB, bairro, município, RT (mesmo padrão do
+     Layout_Planta_Nucleo_A3 do Núcleo, sem tabela de quadras/lotes)
+   - Carimbo com TEXT_ELEMENTs nomeados exatamente `{bairro}`, `{municipio}`,
+     `{area}`, `{processo}`, `{perimetro}`, `{data}`, `{fusoutm}`,
+     `{responsavel_tecnico}`, `{funcao}`, `{n_crea_cau}` (mesma convenção
+     `{chave}` do Núcleo — ver `gerarplantanucleo/.../gerar_planta.py`).
+     `gerar_planta_perimetro.py` (Fase 2, T2.3) já está pronto para
+     preencher esses textos assim que o layout existir.
+
+Não criar layouts de documentos no APRX. O memorial, o quadro adicional
+(quando necessário) e o termo de autenticação são paginados
+automaticamente por `documentos_pdf.py`.
+
+--------------------------------------------------------------------
+PASSO 3 — Nome dos elementos usados pelo código
+--------------------------------------------------------------------
+
+Os nomes abaixo já estão fixados em `caminhos_gerais.py` e/ou nos módulos
+da Fase 2 (`gerar_planta_perimetro.py`, `memorial_narrativo.py`,
+`quadro_coordenadas.py`) e serão usados pelo código das próximas fases.
+Ao criar os layouts, use exatamente estes nomes (Contents pane > Layout >
+nome do elemento):
+
+  - Layout: Layout_Planta_Perimetro_A3
+      - Map Frame principal: MAP_FRAME
+      - Map Frame de overview: OVERVIEW_MAP_FRAME
+      - TextElements do carimbo: {bairro}, {municipio}, {area}, {processo},
+        {perimetro}, {data}, {fusoutm}, {responsavel_tecnico}, {funcao},
+        {n_crea_cau}, {matricula}, {folha}, {protocolo}
+      - TextElement do aviso da tabela-resumo: {aviso_tabela}
+        (texto preenchido pelo código, ver abaixo). Se o elemento não
+        existir, a ferramenta só emite aviso no geoprocessing.
+
+    Sobre {folha} e {aviso_tabela}: acima de 35 segmentos a lista não cabe
+    no Table Frame, então a tabela sai como resumo (até P-035), o carimbo
+    recebe "01/02" e o Quadro de Confrontações completo vira folha
+    adicional ("02/02"), com o aviso citando o Art. 176 da Lei 6.015/73.
+    Cabendo tudo, a tabela sai integral, {folha} fica "Única" e não há
+    quadro em anexo. Ver `exportar_pdf_unificado.planejar_folhas`.
+    O Quadro em anexo não usa elementos do APRX: sai em A3 paisagem, no
+    mesmo tamanho da planta, com a lista em dois blocos lado a lado — como
+    no anexo da ferramenta do Núcleo, que faz isso pelo Table Frame. Ver
+    `documentos_pdf.gerar_quadro`.
+
+Os documentos gerados fora do APRX (memorial, quadro e termo) são
+paginados automaticamente por `documentos_pdf.py`.
+
+Se usar nomes diferentes, atualize `caminhos_gerais.py` (layouts) ou as
+constantes `NOME_MAPA_PRINCIPAL`/`NOME_MAPA_OVERVIEW`
+(`gerar_planta_perimetro.py`), `NOME_TEXT_ELEMENT_MEMORIAL`
+(`memorial_narrativo.py`) ou `NOME_TABLE_FRAME_QUADRO`
+(`quadro_coordenadas.py`), e documente a mudança aqui.
+
+--------------------------------------------------------------------
+Status dos módulos de código (Fase 2 — artefatos documentais)
+--------------------------------------------------------------------
+
+Os módulos abaixo já implementam a lógica pura (testada sem ArcPy) e um
+wrapper ArcPy fino. Enquanto os layouts acima não existirem, os wrappers
+ArcPy levantam `RuntimeError` apontando para este arquivo — não geram
+PDF parcial nem quebram com um erro genérico do ArcPy:
+
+  - `quadro_coordenadas.py`: exporta o CSV do quadro.
+  - `memorial_narrativo.py`: monta o texto narrativo.
+  - `documentos_pdf.py`: gera memorial e termo em A4 e o quadro adicional
+    em A3 paisagem.
+  - `gerar_planta_perimetro.py`: valida e preenche a planta A3 no APRX.
+  - `exportar_pdf_unificado.py`: ordena e une os PDFs parciais.
+
+--------------------------------------------------------------------
+PASSO 4 — Verificação
+--------------------------------------------------------------------
+
+No Pro (Python window) ou script:
+
+  import arcpy
+  p = arcpy.mp.ArcGISProject(r"<caminho para project_layout.aprx>")
+  print([l.name for l in p.listLayouts()])
+
+Deve listar os 3 nomes do PASSO 2.
+
+--------------------------------------------------------------------
+Enquanto os layouts não existem
+--------------------------------------------------------------------
+
+A toolbox `.pyt` executa o pipeline completo. Antes de exportar a planta,
+o código valida o contrato do layout e bloqueia o PDF se qualquer elemento
+obrigatório estiver ausente. CSV, ZIP e auditoria podem ser preservados
+como entrega parcial; falhas operacionais não são mascaradas como problema
+de layout.

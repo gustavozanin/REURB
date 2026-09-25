@@ -1,0 +1,19 @@
+GDB auxiliar Desktop
+====================
+
+Este diretório deve conter o arquivo:
+
+  auxiliar_desktop.gdb
+    ├── municipios          (polígonos; campos CD_MUN, NM_MUN)
+    └── responsavel_tecnico (tabela; campos nome, formacao, credenciamento)
+
+Como gerar (TI com VPN/SDE):
+
+  1. Ajuste CONEXAO_SDE em pacote_desktop/scripts/atualizar_gdb_auxiliar.py
+  2. Execute o script no Python do ArcGIS Pro
+  3. Confirme que auxiliar_desktop.gdb apareceu nesta pasta
+  4. Copie o mesmo GDB para as pastas databases/auxiliar_desktop
+     de Núcleo e Loteamento (o script já tenta fazer isso)
+
+Sem este GDB, as ferramentas Desktop falham ao buscar município
+ou cadastro do responsável técnico.

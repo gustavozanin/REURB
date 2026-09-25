@@ -9,6 +9,7 @@ Este repositório concentra scripts Python, toolboxes (`.pyt`) e documentação 
 ```text
 REURB/
   ferramentas/          Toolboxes e scripts por produto
+  REURB_ITERMA/         Pacote Desktop das plantas REURB (ArcGIS Pro, sem SDE)
   SHP/                  Shapefiles de apoio
   reurb.gdb/            Geodatabase local
   memoriais/            Memoriais gerados
@@ -20,6 +21,7 @@ Pastas de saída (`resultados/`, `tmp/`, `dados_exportados_arcgis/`) não entram
 
 | Pasta | Descrição | Documentação |
 |-------|-----------|--------------|
+| `REURB_ITERMA/REURB_Plantas_v0.14.0` | Caixa Desktop (núcleo, loteamento, vértices, institucional, memoriais de quadras) | [LEIA-ME](REURB_ITERMA/REURB_Plantas_v0.14.0/LEIA-ME_ANALISTA.txt) |
 | `gerarplantanucleo` | Planta de núcleo, quadro de coordenadas e memorial descritivo | [README](ferramentas/gerarplantanucleo/README_AUTOMACAO_REURB.md) |
 | `gerarpranchaloteamento` | PRANCHA 02 — Planta do loteamento | [README](ferramentas/gerarpranchaloteamento/README_PRANCHA_LOTEAMENTO.md) |
 | `gerarplantageralbairro` | Planta geral do bairro e memoriais de quadras/eixos | [README](ferramentas/gerarplantageralbairro/README_PLANTA_GERAL_BAIRRO.md) |

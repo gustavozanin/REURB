@@ -19,3 +19,16 @@ __pycache__/
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# Pacote Desktop REURB (C:\REURB\REURB_ITERMA)
+REURB_ITERMA/*.zip
+REURB_ITERMA/REURB_Plantas_v0.13*/
+REURB_ITERMA/.backups/
+REURB_ITERMA/Index/
+REURB_ITERMA/GpMessages/
+REURB_ITERMA/ImportLog/
+REURB_ITERMA/RasterFunctionTemplates/
+**/*.pagx.bak*
+**/*.pagx.bak_*
+**/*.aprx.bak*
+**/*.aprx.bak_*
