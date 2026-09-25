@@ -1,0 +1,19 @@
+TESTE v0.14.0 — Plantas REURB
+=============================
+
+Informe versao=0.14.0 (VERSAO.txt) em qualquer chamado.
+Não misture esta pasta com a v0.13.2.
+
+Como abrir no ArcGIS Pro
+------------------------
+1) Use disco local (não rode de OneDrive/Drive).
+2) Abra C:\REURB\REURB_ITERMA\REURB_ITERMA.aprx e faça login no ITERMA.
+3) Catalog → Toolboxes → Add Toolbox (ou Refresh):
+   C:\REURB\REURB_ITERMA\REURB_Plantas_v0.14.0\REURB_Plantas.pyt
+   Nome: "REURB Plantas (Desktop)"
+4) Pasta de saída nova, só desta versão. A ferramenta cria uma subpasta
+   por corrida (ex.: nucleo_062502287_2026_AAAAMMDD_HHMMSS_pid).
+5) Roteiro: NOTAS_TESTE_v0.14.0.txt
+
+Se o log não mostrar "=== execução Desktop isolada ===", feche o Pro
+e abra de novo (Python antigo em memória).

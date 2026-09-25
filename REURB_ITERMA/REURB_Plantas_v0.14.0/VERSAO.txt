@@ -1,0 +1,4 @@
+versao=0.14.0
+gerado_em=2026-09-25T12:00:00-03:00
+origem=C:\REURB\REURB_ITERMA\REURB_Plantas_v0.13.2
+nota=Pacote Desktop consolidado. Isola cada corrida (scratch, pasta e diário). Não apaga a scratch do projeto. Não sobrescreve PDF/ZIP. Núcleo/loteamento: INTERSECT e rótulo LOTE em caixa alta. Loteamento: Q da quadra igual ao núcleo. Confrontante no trecho De→Para. RT só sai em trio.

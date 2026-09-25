@@ -1,0 +1,88 @@
+LEIA-ME — Geração de Plantas REURB (Analistas)
+==============================================
+
+Instalação (máquina local)
+--------------------------
+1) Descompacte o ZIP recebido por e-mail/Teams em um disco local, por exemplo:
+   C:\Ferramentas\REURB_Plantas_v0.14.0\
+   (não rode de dentro do OneDrive/SharePoint em sincronização)
+2) Em atualizações, use a pasta da nova versão (não misture versões).
+3) Informe o número de VERSAO.txt ao abrir chamado.
+
+Nesta versão (0.14.0)
+---------------------
+- Cada corrida grava numa subpasta (não sobrescreve PDF/ZIP antigos) e
+  deixa diario.json. A scratch do projeto do ArcGIS Pro não é apagada.
+- Planta Núcleo: a escala do carimbo é a do mapa principal (não do
+  overview); o limite do bairro entra como polígono; os números de
+  quadra permanecem visíveis. Quadras na borda entram por interseção.
+- Planta Loteamento: polígonos e números de quadra no desenho (Q
+  laranja, igual ao núcleo); a escala também é a do mapa principal;
+  a legenda mostra Quadras e Limite do Bairro como polígonos (igual
+  ao núcleo); a quadra é desenhada acima do limite do bairro.
+- Rótulo de lote vizinho em caixa alta (LOTE 33).
+
+Uso no ArcGIS Pro
+-----------------
+1) Abra o ArcGIS Pro e faça login no portal ITERMA.
+2) Abra o projeto:
+   pacote_desktop\REURB_Plantas_Desktop.aprx
+   (ou use o mapa REURB_ITERMA que você já tiver)
+3) No Catalog, abra a caixa **REURB Plantas (Desktop)** (`REURB_Plantas.pyt`).
+   Se não aparecer: Toolboxes → Add Toolbox nesse arquivo.
+   Quem já usa C:\REURB\REURB_ITERMA encontra a caixa ao lado do .aprx.
+   As toolboxes individuais nas pastas gerarplanta* continuam valendo, se precisar.
+4) Em Geoprocessing, rode:
+   - "Gerar Planta Núcleo (Desktop)"  OU
+   - "Gerar Planta Loteamento (Desktop)"  OU
+   - "Gerar Planta Vértices Confrontantes Memorial (Desktop)"
+   - "Gerar Memoriais de Quadras (Desktop)"
+   - "Gerar Planta Lote Institucional (Desktop)"
+   Informe o número do REURB (ex.: 051201571/2026) e a pasta de saída.
+   Na institucional, informe também **Quadra** e **Lote**.
+5) Abra o PDF e o ZIP gerados na pasta escolhida.
+
+Aviso desta versão: a ferramenta de Vértices/Confrontantes/Memorial ainda
+pode deixar o PDF pendente se os layouts não tiverem sido finalizados no
+Pro pelo TI; CSV e ZIP saem normalmente.
+
+Sobre a ferramenta "Gerar Planta Lote Institucional (Desktop)":
+- Gera planta + memorial + quadro de um **lote** com status
+  Institucional Municipal ou Institucional Estadual.
+- Parâmetros: REURB + Quadra + Lote (+ densidade e RT opcional).
+- `validado` nulo não bloqueia. Situação/Observação só viram aviso no
+  Geoprocessing (não entram no PDF).
+- Saídas: planta_institucional_*_Q*_L*.pdf, quadro_institucional_*.csv,
+  shape_institucional_*.zip.
+- Amostras: Praça São Sebastião (050601273/2026 Q11 L01); Campo de Pouso
+  (051201571/2026 Q11 L01).
+
+Sobre a ferramenta "Gerar Memoriais de Quadras (Desktop)":
+- Gera um PDF A4 por quadra e, opcionalmente, um PDF consolidado.
+- O campo Quadras aceita valores separados por vírgula; vazio processa todas.
+- Também salva os dados e a auditoria geométrica de cada quadra em JSON.
+- Segmentos sem logradouro próximo são destacados no JSON como não identificados.
+- As bibliotecas de PDF (reportlab) vêm na pasta libs\ de Memoriais de
+  Quadras, Lote Institucional e Vértices/Memorial. Não instale nada com
+  pip no Python do ArcGIS Pro.
+
+Sobre a ferramenta "Gerar Planta Vértices Confrontantes Memorial (Desktop)":
+- Gera planta de perímetro + memorial descritivo narrativo + quadro de
+  coordenadas (tudo em UTM, com confrontantes) num único PDF, mais o CSV
+  do quadro e o ZIP do shapefile.
+- Parâmetro "Densidade de vértices": `integral` (padrão, todos os
+  vértices) ou `simplificado` (remove vértices colineares).
+- Enquanto os layouts desta ferramenta não forem criados no Pro (aviso
+  do TI), a ferramenta ainda assim salva o CSV e o ZIP; o PDF fica
+  pendente e a mensagem final explica o motivo.
+
+Pré-requisitos do processo no mapa (camada Bairro):
+- status = 2 ou 4
+- responsavel_tecnico preenchido no Bairro
+  OU informe Nome do RT / Formação / CREA nos parâmetros opcionais da ferramenta
+  (hoje o FeatureServer costuma vir com responsavel_tecnico vazio)
+
+Guia completo: docs\uso-arcgis-pro-analistas.md
+Erros comuns: docs\checklist-erros.md
+
+Versão deste pacote: VERSAO.txt (informe esse número ao abrir um chamado).

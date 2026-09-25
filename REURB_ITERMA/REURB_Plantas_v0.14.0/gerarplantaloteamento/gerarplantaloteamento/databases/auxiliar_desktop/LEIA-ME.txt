@@ -1,0 +1,12 @@
+GDB auxiliar Desktop
+====================
+
+Coloque aqui o arquivo auxiliar_desktop.gdb gerado pelo script:
+
+  pacote_desktop/scripts/atualizar_gdb_auxiliar.py
+
+Conteúdo esperado:
+  - municipios (CD_MUN, NM_MUN)
+  - responsavel_tecnico (nome, formacao, credenciamento)
+
+Sem este GDB, a ferramenta Desktop não consegue completar a planta.

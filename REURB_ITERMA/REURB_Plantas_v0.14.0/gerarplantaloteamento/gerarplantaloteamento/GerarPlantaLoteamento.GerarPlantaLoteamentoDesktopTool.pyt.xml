@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="pt"><Esri><CreaDate>20260730</CreaDate><CreaTime>12000000</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce></Esri><dataIdInfo><idCitation><resTitle>Gerar Planta Loteamento (Desktop)</resTitle></idCitation><idAbs>Gera a planta de loteamento via FeatureServer REURB_ITERMA e salva PDF e ZIP na pasta escolhida. Não requer VPN/SDE.</idAbs></dataIdInfo></metadata>

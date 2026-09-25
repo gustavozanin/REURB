@@ -1,0 +1,122 @@
+RELATÓRIO DE MELHORIAS ATENDIDAS
+REURB Plantas — versão 0.14.0
+Data: 25/09/2026
+Pacote: H:\Meu Drive\GESTÃO_ITERMA\02_Ferramentas ArcGis Pro\REURB_Plantas_v0.14.0.zip
+SHA256: fca89224f10012f010d84905c4cbf0f427619b6ad2acc9f022488764d127f34d
+
+
+Este texto descreve o que a 0.14.0 corrige em relação à 0.13.2, o que foi
+testado no ArcGIS Pro e o que ficou de fora de propósito.
+
+
+1. Como instalar
+----------------
+Descompacte o ZIP em disco local, por exemplo:
+  C:\REURB\REURB_ITERMA\REURB_Plantas_v0.14.0\
+
+Não rode de dentro do Drive/OneDrive. No Catalog, abra só esta caixa:
+  REURB_Plantas.pyt  (nome: REURB Plantas Desktop)
+
+Não misture a pasta da 0.13.2 no mesmo projeto. Se o Pro já tinha a
+versão antiga aberta, feche o ArcGIS Pro por completo e abra de novo.
+
+
+2. Melhorias atendidas (o que muda no dia a dia)
+------------------------------------------------
+
+2.1 Cada corrida fica isolada
+- A ferramenta grava numa subpasta com data e número do processo
+  (ex.: nucleo_062502287_2026_20260925_120907_28620).
+- Se o PDF ou o ZIP já existir, a corrida para. Não sobrescreve.
+- A scratch usada é exclusiva, em %TEMP%. A scratch do projeto
+  (inclusive a que fica no OneDrive) não é mais apagada no fim.
+
+2.2 Dá para conferir o que rodou
+- Em cada pasta de saída sai um diario.json com versão do pacote,
+  ArcGIS Pro, scratch e, no núcleo/loteamento, a contagem de quadras
+  e lotes (atributo, INTERSECT e centroide).
+
+2.3 Duas versões não se misturam no Python do Pro
+- O carregador identifica a caixa pelo caminho da pasta. Rodar a
+  0.14.0 não executa código da 0.13.2, mesmo se a sessão antiga
+  ainda tiver módulos em memória.
+
+2.4 Quadras na borda entram na planta
+- Núcleo e loteamento usam INTERSECT (não só o centroide).
+- São Sebastião 062502287/2026: 12 quadras / 270 lotes, com Q1 e Q2.
+
+2.5 Confrontante no trecho certo (De → Para)
+- No memorial e no quadro, o confrontante da linha é o daquele
+  trecho, não o do trecho seguinte.
+- Institucional Centro 050601273/2026 Q11 L01: P-001→P-002 = LOTE 02
+  no CSV, no quadro do PDF e no texto do memorial.
+- Institucional São Sebastião Q8 L33: LOTE 34 e LOTE 32 A em caixa alta;
+  MATRÍCULA 111, LIVRO 02 por extenso.
+
+2.6 Rótulo de lote vizinho em caixa alta
+- LOTE 33, LOTE 32 A, LOTE 02 — igual na planta, no CSV e no memorial.
+
+2.7 Vértices do coletivo Centro (Peri Mirim)
+- P-051, P-052, P-053, P-062 e P-063 = MATRÍCULA N° 128, L 02
+  (não Portinho). 126/126 segmentos com confrontante.
+
+2.8 Número da quadra no loteamento igual ao do núcleo
+- O Q no mapa (Q9, Q12, Q18…) é texto laranja, sem caixa amarela.
+- Conferido no loteamento 051301595/2026 (Centro / São João do Paraíso).
+
+2.9 RT só sai em trio
+- Nome, formação e CREA/CAU só juntos, do mesmo cadastro (ou dos três
+  campos preenchidos na ferramenta).
+
+
+3. Testes que fecharam esta entrega
+-----------------------------------
+Pasta local: C:\Users\gusta\Downloads\testes_ferramenta\v0.14.0\
+ArcGIS Pro 3.7.2, pacote 0.14.0.
+
+A) Núcleo — 062502287/2026 (São Sebastião) — passou
+   12 quadras / 270 lotes; Q1 e Q2 no layout; scratch em %TEMP%.
+
+B) Vértices — 050601273/2026 (Centro Peri Mirim) — passou
+   Matrícula 128 nos pontos combinados; PDF, CSV e ZIP na subpasta.
+
+C) Institucional — 050601273/2026 Q11 L01 (Praça de São Sebastião) — passou
+   Confrontante da linha De = frase do memorial naquele trecho.
+
+D) Loteamento — 050601273/2026 (Centro Peri Mirim) — passou
+   30 quadras (1 a 30). Q9, Q12, Q18 e Q28 visíveis.
+   Q31 e Q50 não existem neste coletivo (cadastro, não filtro).
+   Q18 = 7 lotes.
+   Complemento visual com Q31 e Q50: loteamento 051301595/2026
+   (Centro / São João do Paraíso), 50 quadras / 988 lotes.
+   Q18 = 31 lotes; Q50 = 34 lotes.
+
+Corridas extras (não bloqueiam, reforçam a 0.14.0)
+- Núcleo 070902676/2026 (Alcântara / Pinheiro): 48 quadras / 1.568 lotes.
+- Vértices 070902676/2026: 125/125 confrontantes.
+- Institucional 070902676/2026 Q21 L01 (Feira Municipal).
+- Institucional 062502287/2026 Q8 L33 (Campo Municipal).
+
+
+4. O que esta versão não altera (de propósito)
+----------------------------------------------
+Estes itens continuam fora do pacote 0.14.0:
+
+- Erro 2 das peças individuais do Centro (164 memoriais de lote).
+  A planta de vértices do coletivo (item B) não é essa peça.
+- Diferença de área/perímetro quando o perímetro tem arco: o memorial
+  usa os vértices de edição, sem ponto extra na curva.
+- Consulta automática de formação/CREA só na ferramenta de memoriais
+  de quadras (nas outras, o analista informa o trio ou usa o Bairro).
+
+
+5. Arquivos desta atualização no Drive
+--------------------------------------
+Ferramenta:
+  H:\Meu Drive\GESTÃO_ITERMA\02_Ferramentas ArcGis Pro\REURB_Plantas_v0.14.0.zip
+
+Versão anterior (arquivo):
+  H:\Meu Drive\GESTÃO_ITERMA\02_Ferramentas ArcGis Pro\V_OLD\REURB_Plantas_v0.13.2.zip
+
+Este relatório:
+  H:\Meu Drive\GESTÃO_ITERMA\02_Ferramentas ArcGis Pro\Documentação\RELATORIO_MELHORIAS_REURB_Plantas_v0.14.0.txt
